@@ -61,7 +61,7 @@ const Portfolio = () => {
     {
       title: "Weather Web-App",
       description: "Weather application fetching and displaying real-time weather data based on user location.",
-      tech: ["API", "Geolocation", "React.js", "CSS"],
+      tech: ["API", "React.js", "CSS"],
       image: WeatherImg,
       github: "https://github.com/chiyaw/Weather",
       live: "https://weather-three-inky.vercel.app/"
