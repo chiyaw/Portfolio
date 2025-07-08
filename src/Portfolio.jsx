@@ -14,15 +14,18 @@ import {
   faPhone, 
   faBriefcase 
 } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import WeatherImg from './Assets/Weather-img.png';
 import CalculatorImg from './Assets/Calculator-img.png';
 import BMICalImg from './Assets/BMI-Cal-img.png';
 import ResumePDF from './Assets/Shreya Resume.pdf';
 
-
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
+  const [roleIndex, setRoleIndex] = useState(0);
+  const roles = ["Full Stack Developer", "Front-end Developer", "Back-end Developer"];
+  const [isTransitioning, setIsTransitioning] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +34,20 @@ const Portfolio = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsTransitioning(true);
+      setRoleIndex((prev) => (prev + 1) % roles.length);
+      
+      // Reset animation after transition completes
+      setTimeout(() => {
+        setIsTransitioning(false);
+      }, 500);
+    }, 2000);
+    
+    return () => clearInterval(interval);
+  }, [roles.length]);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -81,7 +98,7 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Welcome!
+              Hello!
             </div>
             <div className="hidden md:flex space-x-8">
               {['home', 'about', 'skills', 'projects', 'contact'].map((item) => (
@@ -111,12 +128,32 @@ const Portfolio = () => {
               SS
             </div>
           </div>
+          <p className='text-left text-purple-400'>
+            Its 
+          </p>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
             Shreya Srivastava
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            Full Stack Developer
-          </p>
+          <div className="h-12 flex items-center justify-center mb-8 overflow-hidden">
+    <div className="relative h-12 w-full max-w-lg"> {/* Added max-width */}
+      {roles.map((role, idx) => (
+        <div
+          key={idx}
+          className={`absolute w-full text-xl md:text-2xl text-gray-300 transition-all duration-500 whitespace-nowrap ${
+            roleIndex === idx ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
+          }`}
+          style={{ 
+            top: 0,
+            left: 0,
+            right: 0,
+            textAlign: 'center' // Center the text
+          }}
+        >
+          {role}
+        </div>
+      ))}
+    </div>
+  </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <button 
               onClick={() => scrollToSection('projects')}
@@ -296,13 +333,23 @@ const Portfolio = () => {
                   <p className="text-gray-300">Prayagraj, India</p>
                 </div>
               </div>
-              <div className="flex gap-4 pt-4">
-                <a href="#" className="w-12 h-12 bg-gray-800 hover:bg-purple-500 rounded-full flex items-center justify-center transition-colors text-xl">
-                  <FontAwesomeIcon icon={faLaptop} />
-                </a>
-                <a href="#" className="w-12 h-12 bg-gray-800 hover:bg-purple-500 rounded-full flex items-center justify-center transition-colors text-xl">
-                  <FontAwesomeIcon icon={faBriefcase} />
-                </a>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-xl">
+                  <FontAwesomeIcon icon={faGithub} />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold">GitHub</h3>
+                  <a href="https://github.com/chiyaw" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-purple-400 transition-colors">github/chiyaw</a>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-xl">
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold">LinkedIn</h3>
+                  <a href="www.linkedin.com/in/shreya-s-08b2bb214" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-purple-400 transition-colors">linkedin/shreya</a>
+                </div>
               </div>
             </div>
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-purple-500/20">
