@@ -56,15 +56,6 @@ const Portfolio = () => {
     }
   };
 
-  const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = '/Shreya_Resume.pdf';
-    link.download = 'Shreya_Srivastava_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   const projects = [
     {
       title: "Weather Web-App",
@@ -170,7 +161,8 @@ const Portfolio = () => {
               View My Work
             </button>
             <a
-            onClick={handleDownload}
+            href="https://drive.google.com/file/d/1AEK5GB_F7GJ7DlYXoR12sscb7C2HwSLR/view?usp=sharing"
+            download="Shreya_Srivastava_Resume.pdf"
             className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-full font-semibold transition-all duration-200 transform hover:scale-105 flex items-center gap-2"
           >
           <FontAwesomeIcon icon={faDownload} />
