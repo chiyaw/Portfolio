@@ -125,9 +125,9 @@ const Portfolio = () => {
 
   const skills = [
     { name: "Frontend", icon: faLaptop, items: ["React", "TypeScript", "Tailwind CSS"] },
-    { name: "Backend", icon: faBolt, items: ["Node.js", "Python", "PostgreSQL"] },
-    { name: "Design", icon: faPalette, items: ["Figma", "Responsive Design"] },
-    { name: "Tools", icon: faScrewdriverWrench, items: ["Git & Github", "Cursor.ai", "VS Code"] }
+    { name: "Backend", icon: faBolt, items: ["Node.js", "Python", "PostgreSQL", "MySQL"] },
+    { name: "Design", icon: faPalette, items: ["Figma", "Responsive Design", "CodePen"] },
+    { name: "Tools", icon: faScrewdriverWrench, items: ["Git & Github", "Cursor.ai", "VS Code", "Vercel"] }
   ];
 
   return (
