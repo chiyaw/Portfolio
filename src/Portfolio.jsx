@@ -402,15 +402,6 @@ const Portfolio = () => {
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-xl">
-                  <FontAwesomeIcon icon={faPhone} />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold">Phone</h3>
-                  <p className="text-gray-300">+91-95554-18892</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-xl">
                   <FontAwesomeIcon icon={faLocationDot} />
                 </div>
                 <div>
