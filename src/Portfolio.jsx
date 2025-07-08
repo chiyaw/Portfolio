@@ -161,13 +161,13 @@ const Portfolio = () => {
               View My Work
             </button>
             <a
-              href="/Shreya_Resume.pdf"
-              download="Shreya_Srivastava_Resume.pdf"
-              className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-full font-semibold transition-all duration-200 transform hover:scale-105 flex items-center gap-2"
-            >
-              <FontAwesomeIcon icon={faDownload} />
-              Download CV
-            </a>
+            href="Shreya_Resume.pdf"
+            download="Shreya_Srivastava_Resume.pdf"
+            className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-full font-semibold transition-all duration-200 transform hover:scale-105 flex items-center gap-2"
+          >
+          <FontAwesomeIcon icon={faDownload} />
+          Download CV
+        </a>
           </div>
           <div className="animate-bounce">
             <div className="w-8 h-8 mx-auto text-purple-400 flex items-center justify-center text-2xl">
