@@ -14,10 +14,10 @@ import {
   faPhone, 
   faBriefcase 
 } from '@fortawesome/free-solid-svg-icons';
-import WeatherImg from './assets/Weather-img.png';
-import CalculatorImg from './assets/Calculator-img.png';
-import BMICalImg from './assets/BMI-Cal-img.png';
-import ResumePDF from './assets/Shreya Resume.pdf';
+import WeatherImg from './Assets/Weather-img.png';
+import CalculatorImg from './Assets/Calculator-img.png';
+import BMICalImg from './Assets/BMI-Cal-img.png';
+import ResumePDF from './Assets/Shreya Resume.pdf';
 
 
 const Portfolio = () => {
