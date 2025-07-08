@@ -12,7 +12,9 @@ import {
   faLink, 
   faEnvelope, 
   faPhone, 
-  faBriefcase 
+  faBriefcase,
+  faCertificate,
+  faAward
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import WeatherImg from './Assets/Weather-img.png';
@@ -83,6 +85,44 @@ const Portfolio = () => {
     }
   ];
 
+  const certificates = [
+    {
+      title: "Responsive Web Design",
+      issuer: "FreeCodeCamp",
+      date: "2021",
+      description: "Modern responsive design techniques using CSS Grid, Flexbox, and media queries for creating adaptive web layouts.",
+      verifyLink: "https://www.freecodecamp.org/certification/fccfcd1871a-e545-4bea-982b-337d372863a7/responsive-web-design"
+    },
+    {
+      title: "Research Paper Certificate",
+      issuer: "Academic Publication",
+      date: "2024",
+      description: "Research contribution in breast cancer detection and analysis using machine learning techniques.",
+      verifyLink: "https://github.com/chiyaw/Breast-Cancer/blob/main/Research-Paper-Certificate.pdf"
+    },
+    {
+      title: "Digital Marketing",
+      issuer: "Google",
+      date: "2023",
+      description: "Professional certification in Google tools and digital marketing fundamentals.",
+      verifyLink: "https://skillshop.exceedlms.com/student/award/KHtx2vzUSWw8ujWpUCbw6Ajo"
+    },
+    {
+      title: "Data Analysis with Python",
+      issuer: "FreeCodeCamp",
+      date: "2023",
+      description: "Comprehensive Python programming for data analysis including NumPy, Pandas, and data visualization.",
+      verifyLink: "https://www.freecodecamp.org/certification/fccfcd1871a-e545-4bea-982b-337d372863a7/data-analysis-with-python-v7"
+    },
+    {
+      title: "Git and GitHub Fundamentals",
+      issuer: "Le Wagon",
+      date: "2025",
+      description: "Introduction to version control, collaboration, and project management using Git and GitHub.",
+      verifyLink: "https://app.lewagon.school/certificates/is6pz3yi24"
+    }
+  ];
+
   const skills = [
     { name: "Frontend", icon: faLaptop, items: ["React", "TypeScript", "Tailwind CSS"] },
     { name: "Backend", icon: faBolt, items: ["Node.js", "Python", "PostgreSQL"] },
@@ -100,7 +140,7 @@ const Portfolio = () => {
               Hello!
             </div>
             <div className="hidden md:flex space-x-8">
-              {['home', 'about', 'skills', 'projects', 'contact'].map((item) => (
+              {['home', 'about', 'skills', 'projects', 'certificates', 'contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -291,8 +331,54 @@ const Portfolio = () => {
         </div>
       </section>
 
+      {/* Certificates Section */}
+      <section id="certificates" className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Certifications
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto"></div>
+            <p className="text-lg text-gray-300 mt-6">
+              Continuous learning and professional development achievements
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {certificates.map((cert, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:transform hover:scale-105 group">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-xl group-hover:scale-110 transition-transform duration-300">
+                    <FontAwesomeIcon icon={faCertificate} />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white">{cert.title}</h3>
+                    <p className="text-purple-300 text-sm">{cert.issuer}</p>
+                  </div>
+                </div>
+                <div className="mb-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <FontAwesomeIcon icon={faAward} className="text-pink-400 text-sm" />
+                    <span className="text-gray-300 text-sm">{cert.date}</span>
+                  </div>
+                  <p className="text-gray-300 text-sm leading-relaxed">{cert.description}</p>
+                </div>
+                <div className="pt-4 border-t border-gray-700/50">
+                  <a 
+                    href={cert.verifyLink}
+                    className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors text-sm font-medium"
+                  >
+                    <FontAwesomeIcon icon={faLink} />
+                    Verify Certificate
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
-      <section id="contact" className="py-20">
+      <section id="contact" className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
