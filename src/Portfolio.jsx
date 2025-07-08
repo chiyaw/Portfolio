@@ -347,7 +347,7 @@ const Portfolio = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold">LinkedIn</h3>
-                  <a href="www.linkedin.com/in/shreya-s-08b2bb214" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-purple-400 transition-colors">linkedin/shreya</a>
+                  <a href="https://www.linkedin.com/in/shreya-s-08b2bb214" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-purple-400 transition-colors">linkedin/shreya</a>
                 </div>
               </div>
             </div>
