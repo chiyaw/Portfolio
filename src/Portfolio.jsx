@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
-  faArrowDown, 
-  faDownload, 
+  faArrowDown, faDownload, 
   faLocationDot, 
   faInbox, 
   faLaptop, 
@@ -11,10 +10,9 @@ import {
   faScrewdriverWrench, 
   faLink, 
   faEnvelope, 
-  faPhone, 
-  faBriefcase,
   faCertificate,
-  faAward
+  faAward,
+  faPrayingHands
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import WeatherImg from './Assets/Weather-img.png';
@@ -137,7 +135,7 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Namaste!
+            Namaste!<FontAwesomeIcon icon={faPrayingHands} />
             </div>
             <div className="hidden md:flex space-x-8">
               {['home', 'about', 'skills', 'projects', 'certificates', 'contact'].map((item) => (
@@ -201,7 +199,7 @@ const Portfolio = () => {
               View My Work
             </button>
             <a
-            href="https://drive.google.com/file/d/1pW7R_mmOoZ6OwkWcEWFryrP7nRcTcTqX/view?usp=sharing"
+            href="https://drive.google.com/file/d/1rrpkauFF8Wg4A1l9QO60UuRTeI1vehOg/view?usp=sharing"
             download="Shreya_Srivastava_Resume.pdf"
             className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-full font-semibold transition-all duration-200 transform hover:scale-105 flex items-center gap-2"
           >
