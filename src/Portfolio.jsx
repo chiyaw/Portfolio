@@ -19,7 +19,7 @@ import WeatherImg from './Assets/Weather-img.png';
 import CalculatorImg from './Assets/Calculator-img.png';
 import BMICalImg from './Assets/BMI-Cal-img.png';
 import CF from './Assets/CF.png';
-import fluto from './Assets/Fluto.png';
+import fluto from './Assets/fluto.png';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -352,11 +352,11 @@ const Portfolio = () => {
 
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 bg-gray-900/50">
+      <section id="projects" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Featured Projects
+              Completed Projects
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto"></div>
           </div>
@@ -405,7 +405,7 @@ const Portfolio = () => {
       </section>
 
       {/* Certificates Section */}
-      <section id="certificates" className="py-20">
+      <section id="certificates" className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -451,7 +451,7 @@ const Portfolio = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gray-900/50">
+      <section id="contact" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
