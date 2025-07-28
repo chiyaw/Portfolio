@@ -18,6 +18,8 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import WeatherImg from './Assets/Weather-img.png';
 import CalculatorImg from './Assets/Calculator-img.png';
 import BMICalImg from './Assets/BMI-Cal-img.png';
+import CF from './Assets/CF.png';
+import fluto from './Assets/Fluto.png';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -80,6 +82,25 @@ const Portfolio = () => {
       image: BMICalImg,
       github: "https://github.com/chiyaw/New-BMI",
       live: "https://new-bmi-alpha.vercel.app/"
+    }
+  ];
+
+  const projectsInProgress = [
+    {
+      title: "My Curated Feed",
+      description: "My Curated Feed is a personalized blog feed manager that curates and organizes your favorite content in one place for easy reading.",
+      tech: ["Next.js", "Tailwind CSS", "React.js", "TypeScript"],
+      image: CF,
+      github: "https://github.com/chiyaw/today-task",
+      live: "https://today-task-one.vercel.app/"
+    },
+    {
+      title: "Calendar AI",
+      description: "Calendar AI is an AI-powered calendar assistant that summarizes your events and keeps you updated, helping you stay organized effortlessly.",
+      tech: ["Next.js", "Tailwind CSS", "React.js", "TypeScript"],
+      image: fluto,
+      github: "https://github.com/chiyaw/MVP-NEW",
+      live: "https://www.fluto.life/"
     }
   ];
 
@@ -275,6 +296,60 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
+
+      {/* Projects in Progress Section */}
+      <section id="projects-in-progress" className="py-20 bg-gray-900/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Projects in Progress
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto"></div>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projectsInProgress.map((project, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:transform hover:scale-105 group">
+                <div className="relative overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-3 text-white">{project.title}</h3>
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">{project.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.map((tech, i) => (
+                      <span key={i} className="bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full text-xs">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex gap-4">
+                    <a 
+                      href={project.github}
+                      className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors text-sm"
+                    >
+                      <FontAwesomeIcon icon={faLaptop} />
+                      Code
+                    </a>
+                    <a 
+                      href={project.live}
+                      className="flex items-center gap-2 text-pink-400 hover:text-pink-300 transition-colors text-sm"
+                    >
+                      <FontAwesomeIcon icon={faLink} />
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* Projects Section */}
       <section id="projects" className="py-20 bg-gray-900/50">
