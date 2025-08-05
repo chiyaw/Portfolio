@@ -105,7 +105,7 @@ const Portfolio = () => {
     },
     {
       title: "Flogram",
-      description: "Flogr is a social media platform that allows you to share your photos with the world.",
+      description: "Flogram is a social media platform that allows you to share your photos with the world.",
       tech: ["Next.js", "Tailwind CSS", "React.js", "JavaScript"],
       image: flog,
       github: "https://github.com/chiyaw/Flogr",
