@@ -106,7 +106,7 @@ const Portfolio = () => {
     {
       title: "Flogram",
       description: "Flogram is a social media platform that allows you to share your photos with the world.",
-      tech: ["Next.js", "Tailwind CSS", "React.js", "JavaScript"],
+      tech: ["Next.js", "Tailwind CSS", "React.js", "JavaScript","Redux"],
       image: flog,
       github: "https://github.com/chiyaw/Flogr",
       live: "https://flogram-undf.vercel.app/login"
