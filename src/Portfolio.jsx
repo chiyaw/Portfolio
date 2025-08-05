@@ -20,6 +20,7 @@ import CalculatorImg from './Assets/Calculator-img.png';
 import BMICalImg from './Assets/BMI-Cal-img.png';
 import CF from './Assets/CF.png';
 import fluto from './Assets/fluto.png';
+import flog from './Assets/flog.png';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -100,7 +101,15 @@ const Portfolio = () => {
       tech: ["Next.js", "Tailwind CSS", "React.js", "TypeScript"],
       image: fluto,
       github: "https://github.com/chiyaw/MVP-NEW",
-      live: "https://www.fluto.life/"
+      live: "https://mvp-new-hazel.vercel.app/"
+    },
+    {
+      title: "Flogram",
+      description: "Flogr is a social media platform that allows you to share your photos with the world.",
+      tech: ["Next.js", "Tailwind CSS", "React.js", "JavaScript"],
+      image: flog,
+      github: "https://github.com/chiyaw/Flogr",
+      live: "https://flogram-undf.vercel.app/login"
     }
   ];
 
