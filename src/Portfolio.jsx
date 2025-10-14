@@ -111,14 +111,6 @@ const Portfolio = () => {
       image: fluto,
       github: "https://github.com/chiyaw/MVP-NEW",
       live: "https://mvp-new-hazel.vercel.app/"
-    },
-    {
-      title: "Flogram",
-      description: "Flogram is a social media platform that allows you to share your photos with the world.",
-      tech: ["Next.js", "Tailwind CSS", "React.js", "JavaScript","Redux"],
-      image: flog,
-      github: "https://github.com/chiyaw/Flogr",
-      live: "https://flogram-undf.vercel.app/login"
     }
   ];
 
