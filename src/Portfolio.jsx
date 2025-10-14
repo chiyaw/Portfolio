@@ -64,7 +64,7 @@ const Portfolio = () => {
     {
       title: "Flogram",
       description: "Flogram is a social media platform that allows you to share your photos with the world.",
-      tech: ["API", "React.js", "CSS"],
+      tech: ["API", "React.js", "Tailwind CSS", "JavaScript" , "Redux", "Node.js", "Express.js", "MongoDB", "Mongoose", "Cloudinary" ,"Railway", "Vercel" , "Ant Design"],
       image: flogram,
       github: "https://github.com/chiyaw/Flogram",
       live: "https://flogram.vercel.app/login"
@@ -72,7 +72,7 @@ const Portfolio = () => {
     {
       title: "Weather Web-App",
       description: "Weather application fetching and displaying real-time weather data based on user location.",
-      tech: ["API", "React.js", "CSS"],
+      tech: ["API", "React.js", "Tailwind CSS", "OpenWeatherMap", "Vercel", "JavaScript"],
       image: WeatherImg,
       github: "https://github.com/chiyaw/Weather",
       live: "https://weather-three-inky.vercel.app/"
@@ -80,7 +80,7 @@ const Portfolio = () => {
     {
       title: "Calculator",
       description: "Lightweight calculator app built with vanilla JavaScript, HTML, and CSS for simple, responsive calculations",
-      tech: ["React.js", "CSS", "Javascript"],
+      tech: ["React.js", "Tailwind CSS", "Javascript", "Vercel"],
       image: CalculatorImg,
       github: "https://github.com/chiyaw/Calculator",
       live: "https://calculator-vzv6.vercel.app/"
@@ -88,7 +88,7 @@ const Portfolio = () => {
     {
       title: "BMI Calculator",
       description: "BMI calculator built with React for dynamic and responsive health metric calculations.",
-      tech: ["React.js", "CSS", "Javascript"],
+      tech: ["React.js", "Tailwind CSS", "Javascript", "Vercel"],
       image: BMICalImg,
       github: "https://github.com/chiyaw/New-BMI",
       live: "https://new-bmi-alpha.vercel.app/"
