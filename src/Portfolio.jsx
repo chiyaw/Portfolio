@@ -307,17 +307,17 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Projects in Progress Section */}
-      <section id="projects-in-progress" className="py-20 bg-gray-900/50">
+      {/* Projects Section */}
+      <section id="projects" className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Projects in Progress
+              Completed Projects
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto"></div>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projectsInProgress.map((project, index) => (
+            {projects.map((project, index) => (
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:transform hover:scale-105 group">
                 <div className="relative overflow-hidden">
                   <img 
@@ -360,18 +360,17 @@ const Portfolio = () => {
         </div>
       </section>
 
-
-      {/* Projects Section */}
-      <section id="projects" className="py-20">
+      {/* Projects in Progress Section */}
+      <section id="projects-in-progress" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Completed Projects
+              Projects in Progress
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto"></div>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
+            {projectsInProgress.map((project, index) => (
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:transform hover:scale-105 group">
                 <div className="relative overflow-hidden">
                   <img 
