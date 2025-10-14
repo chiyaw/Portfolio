@@ -21,6 +21,7 @@ import BMICalImg from './Assets/BMI-Cal-img.png';
 import CF from './Assets/CF.png';
 import fluto from './Assets/fluto.png';
 import flog from './Assets/flog.png';
+import flogram from './Assets/flogram.png';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -60,6 +61,14 @@ const Portfolio = () => {
   };
 
   const projects = [
+    {
+      title: "Flogram",
+      description: "Flogram is a social media platform that allows you to share your photos with the world.",
+      tech: ["API", "React.js", "CSS"],
+      image: flogram,
+      github: "https://github.com/chiyaw/Flogram",
+      live: "https://flogram.vercel.app/login"
+    },
     {
       title: "Weather Web-App",
       description: "Weather application fetching and displaying real-time weather data based on user location.",
