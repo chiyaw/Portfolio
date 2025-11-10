@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Portfolio Banner](./favicon.svg)
+![Portfolio Banner]
 
 **A modern, interactive portfolio showcasing full-stack development projects and skills**
 
