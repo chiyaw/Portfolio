@@ -1,18 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faArrowDown, faDownload, 
-  faLocationDot, 
-  faInbox, 
-  faLaptop, 
-  faBolt, 
-  faPalette, 
-  faScrewdriverWrench, 
-  faLink, 
-  faEnvelope, 
-  faCertificate,
-  faAward,
-  faPrayingHands,
+import { faArrowDown, faDownload, faLocationDot, faInbox, faLaptop, 
+  faBolt, faPalette, faScrewdriverWrench, faLink, faEnvelope, faCertificate,faAward,faPrayingHands,
   faCode,
   faDatabase,
   faPaintBrush,
@@ -24,16 +13,12 @@ import {
   faMousePointer
 } from '@fortawesome/free-solid-svg-icons';
 import { 
-  faGithub, 
-  faLinkedin, 
+  faGithub, faLinkedin, 
   faReact, 
-  faNode, 
-  faPython, 
+  faNode, faPython, 
   faFigma, 
-  faGitAlt,
-  faJs,
-  faHtml5,
-  faCss3Alt
+  faGitAlt, faJs,
+  faHtml5, faCss3Alt
 } from '@fortawesome/free-brands-svg-icons';
 import WeatherImg from './Assets/Weather-img.png';
 import CalculatorImg from './Assets/Calculator-img.png';
@@ -125,16 +110,10 @@ const Portfolio = () => {
   // Animated network background with scrolling - SIMPLIFIED VERSION
   useEffect(() => {
     const canvas = networkCanvasRef.current;
-    if (!canvas) {
-      console.error('❌ Canvas ref not found!');
-      return;
-    }
+    
     
     const ctx = canvas.getContext('2d');
-    if (!ctx) {
-      console.error('❌ Could not get canvas context!');
-      return;
-    }
+    
     
     // Set canvas size to cover entire page
     const setCanvasSize = () => {
@@ -148,7 +127,7 @@ const Portfolio = () => {
       );
       canvas.width = width;
       canvas.height = height;
-      console.log('✅ Canvas initialized:', width, 'x', height);
+      
     };
     
     setCanvasSize();
@@ -167,7 +146,7 @@ const Portfolio = () => {
       });
     }
 
-    console.log('✅ Created', nodeCount, 'network nodes');
+    
 
     let frameCount = 0;
     const animate = () => {
@@ -220,15 +199,13 @@ const Portfolio = () => {
       }
       
       frameCount++;
-      if (frameCount % 60 === 0) {
-        console.log('🎬 Animation frame:', frameCount);
-      }
+      
       
       requestAnimationFrame(animate);
     };
 
     animate();
-    console.log('✅ Animation started!');
+    
 
     const handleResize = () => {
       setCanvasSize();
@@ -238,7 +215,7 @@ const Portfolio = () => {
     
     return () => {
       window.removeEventListener('resize', handleResize);
-      console.log('🧹 Network animation cleaned up');
+      
     };
   }, []);
 
