@@ -1,8 +1,22 @@
 {
-  "name": "portfolio",
+  "name": "shreya-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "Shreya Srivastava's Full Stack Developer Portfolio",
+  "author": "Shreya Srivastava <shhreyasrivastava@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chiyaw/portfolio"
+  },
+  "keywords": [
+    "portfolio",
+    "react",
+    "vite",
+    "tailwindcss",
+    "full-stack",
+    "developer"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
