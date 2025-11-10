@@ -661,7 +661,11 @@ const Portfolio = () => {
                         className="text-7xl transition-all duration-300 group-hover/item:scale-110"
                         style={{ 
                           color: '#60A5FA',
-                          filter: 'drop-shadow(0 0 15px rgba(96, 165, 250, 0.8))'
+                          filter: 'drop-shadow(0 0 3px rgba(96, 165, 250, 0.3))',
+                          WebkitFontSmoothing: 'antialiased',
+                          MozOsxFontSmoothing: 'grayscale',
+                          fontSmooth: 'always',
+                          textRendering: 'optimizeLegibility'
                         }}
                       />
                     </div>

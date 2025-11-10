@@ -12,6 +12,21 @@
     cursor: none;
   }
 
+  /* Crisp icon rendering */
+  svg {
+    shape-rendering: geometricPrecision;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Ensure FontAwesome icons render crisply */
+  .svg-inline--fa {
+    shape-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
   /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 12px;
